@@ -1,0 +1,1226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\texture">
+      <UniqueIdentifier>{5fc53adf-9b5a-4883-a3f8-c0c8b8035afa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Asm">
+      <UniqueIdentifier>{28d52b57-79aa-4a28-97c3-c078fad7bb50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\texture">
+      <UniqueIdentifier>{61afd423-6a7b-43b7-b545-71313e78721b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Asm\core">
+      <UniqueIdentifier>{80e452fe-effd-4caf-bf99-71a322ce3f2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\network">
+      <UniqueIdentifier>{827718c8-c46b-45db-ba80-19629d82346d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\network">
+      <UniqueIdentifier>{f823e88c-4a0f-4c03-b33a-188cd142926e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\base">
+      <UniqueIdentifier>{c1c7243e-ec2d-459d-92ff-3a8ef108eb53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core">
+      <UniqueIdentifier>{c1a4d58d-0d09-4f20-81eb-de345586ca57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core\public">
+      <UniqueIdentifier>{ee48565a-f558-4ad9-8b0a-ff33db8f4878}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core\templates">
+      <UniqueIdentifier>{a576f8f6-7930-4211-b08f-2bcc838e2cfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\base">
+      <UniqueIdentifier>{6c9460cc-1094-44bf-8326-3dc3ac69c8be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{b3e546e1-dd2e-43e0-bcf5-6e6a9066c953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core\templates">
+      <UniqueIdentifier>{9e260279-34ce-48c7-913d-81ff3fbfbcf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lua">
+      <UniqueIdentifier>{77ad434d-5106-49bc-84d4-e136848329b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lua-binding">
+      <UniqueIdentifier>{115bad0c-99e9-42f7-909b-594c742f0bbf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\network\oodlestaticlzp.h">
+      <Filter>Header Files\network</Filter>
+    </ClInclude>
+    <ClInclude Include="include\network\oonet2.h">
+      <Filter>Header Files\network</Filter>
+    </ClInclude>
+    <ClInclude Include="include\network\rrarithcoder.h">
+      <Filter>Header Files\network</Filter>
+    </ClInclude>
+    <ClInclude Include="include\network\rrtans.h">
+      <Filter>Header Files\network</Filter>
+    </ClInclude>
+    <ClInclude Include="include\network\oodle2netpub.h">
+      <Filter>Header Files\network</Filter>
+    </ClInclude>
+    <ClInclude Include="include\network\oodlenetplugins_gen.h">
+      <Filter>Header Files\network</Filter>
+    </ClInclude>
+    <ClInclude Include="include\network\oodlenetworkversion.h">
+      <Filter>Header Files\network</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\blocksurface.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\layout.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\linalg.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\oodletexplugins_gen.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\oodletexpub.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\oodletexpubrrs.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\oodletextureversion.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\perceptualactivity.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrblock8x8util.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrcolor.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrcolorfunctors.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrcolorvecc.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrdxt1vq.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrdxt1vqhelp.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrdxtcblock.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrdxtccompress.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrdxtcenums.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrdxtcompresshelp.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrdxtcrd.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrfixedfloat.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrmat3.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrpixelformat.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurface.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfacebc67.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfaceblit.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfaceblitfastimpl.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfacedxtc.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfacefilters.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfacejobslicer.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfacerowcache.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfaceutil.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrvecc.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrveccutil.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\texbase.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc4compress.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc4rd.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc6compress.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc6compress_internal.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc6rd.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc7bits.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc7compress.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc7compress_internal.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc7decode_fast.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc7prep.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc7rd.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc67format.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc67tables.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base\oo2basepub.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base\oodlebasetypes.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base\oo2baseinc.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\public\oodle_platform.h">
+      <Filter>Header Files\core\public</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\templates\rrvector.h">
+      <Filter>Header Files\core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\templates\rrvector_a.h">
+      <Filter>Header Files\core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\templates\rrvector_flex.h">
+      <Filter>Header Files\core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\templates\rrvector_s.h">
+      <Filter>Header Files\core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\templates\rrvector_st.h">
+      <Filter>Header Files\core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\templates\rrvector_t.h">
+      <Filter>Header Files\core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\templates\rrvector_util.h">
+      <Filter>Header Files\core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\templates\chunkstack.h">
+      <Filter>Header Files\core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\templates\rralgorithm.h">
+      <Filter>Header Files\core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\templates\rrhashfunction.h">
+      <Filter>Header Files\core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\templates\rrhashtable.h">
+      <Filter>Header Files\core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\templates\rrnew.h">
+      <Filter>Header Files\core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\templates\rrpool.h">
+      <Filter>Header Files\core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\templates\rrscopedptr.h">
+      <Filter>Header Files\core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\templates\rrstl.h">
+      <Filter>Header Files\core\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\lzb.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\matchfinder.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_arrays.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_arrays_huff.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_arrays_rle.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_arrays_tans.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_block_coders.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_block_coders_ssse3.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_complexliterals.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_decoder.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_histo.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_multiarrays.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_offsets.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_shared.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_simd.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_speedfit.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_subliterals.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_tans.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlz_vtable.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlzf.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlzf_decoder.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlzhc.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\newlzhc_decoder.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\oodlebase.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\oodleconfigvalues.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\oodlecore.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\oodlecoreinit.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\oodlecoreplugins.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\oodlecoreplugins_gen.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\oodlehandle.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\oodlejob.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\oodlelzcompressors.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\oodlelzlegacyvtable.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\oodlelzpub.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\oodlemalloc.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\oodlepublicate.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\oodleversion.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\publicate.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrarenaallocator.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrbase.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrbighash.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrbits.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrbytepacking.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrcompressutil.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrcppstd.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrfuzztesthelper.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrhashes.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrhuffman.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrhuffmandecode.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrlinknode.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrlog.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrlogutil.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrlzh_lzhlw_shared.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrmath.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrmem.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrmemutil.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrplatform.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrprefetch.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrrand.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrsimpleprof.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrsimpleprofstub.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrsprintf.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrstackarray.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrvarbitcodes.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\rrvarbits.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\speedfitter.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\suffixtrie.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\suffixtriematcher.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\threadprofiler.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\biglog2table.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\cbradutil.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\cbstrutil.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\cpux86.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\ctmf.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\eastl_heap.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\entropysets.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\histogram.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\histogram_asm.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\log2table.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\longrangematcher.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\lrminternal.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\lzasserts.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc7prep_format.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\oodle2texint.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lapi.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lauxlib.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lcode.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lctype.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\ldebug.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\ldo.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lfunc.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lgc.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\llex.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\llimits.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lmem.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lobject.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lopcodes.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lparser.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lstate.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lstring.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\ltable.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\ltm.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lua.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lua.hpp">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\luaconf.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lualib.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lundump.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lvm.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lzio.h">
+      <Filter>Header Files\lua</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\network\rrarithcoder.inl">
+      <Filter>Header Files\network</Filter>
+    </None>
+    <None Include="include\network\rrtans.inl">
+      <Filter>Header Files\network</Filter>
+    </None>
+    <None Include="include\network\arith_nosbvaluecoder.inl">
+      <Filter>Header Files\network</Filter>
+    </None>
+    <None Include="include\network\arith_o0.inl">
+      <Filter>Header Files\network</Filter>
+    </None>
+    <None Include="include\network\arith_o1.inl">
+      <Filter>Header Files\network</Filter>
+    </None>
+    <None Include="include\network\arith_o1scontext.inl">
+      <Filter>Header Files\network</Filter>
+    </None>
+    <None Include="include\network\arith_o1symbolranker.inl">
+      <Filter>Header Files\network</Filter>
+    </None>
+    <None Include="include\network\arith_symbolranker.inl">
+      <Filter>Header Files\network</Filter>
+    </None>
+    <None Include="include\network\oodlenetplugins_gen.inc">
+      <Filter>Header Files\network</Filter>
+    </None>
+    <None Include="include\texture\oodletexplugins_gen.inc">
+      <Filter>Header Files\texture</Filter>
+    </None>
+    <None Include="include\texture\perceptualactivity.inl">
+      <Filter>Header Files\texture</Filter>
+    </None>
+    <None Include="include\texture\rrdxt1vqhelp.inl">
+      <Filter>Header Files\texture</Filter>
+    </None>
+    <None Include="include\texture\rrdxtccompress.inl">
+      <Filter>Header Files\texture</Filter>
+    </None>
+    <None Include="include\texture\vec128.inl">
+      <Filter>Header Files\texture</Filter>
+    </None>
+    <None Include="include\texture\vec256.inl">
+      <Filter>Header Files\texture</Filter>
+    </None>
+    <None Include="include\texture\bc7decode_fast_common.inl">
+      <Filter>Header Files\texture</Filter>
+    </None>
+    <None Include="asm\core\newlz_huff6.a64.S">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_huff6_cortex_a57.a64.S">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_huff6_wide.a64.S">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_huff6_x64_bmi2.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_huff6_x64_generic.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_huff6_x64_zen2.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_huff6_x86_sse2.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_huffx64_bmi2.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_huffx64_generic.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_huffx64_jaguar.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_huffx86_sse2.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_tans.a64.S">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_tans_cortex_a57.a64.S">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_tans_wide.a64.S">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_tans_x64_bmi2.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_tans_x64_generic.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_tans_x64_jaguar.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\x64_wc_probe.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\enchuff3_x64_bmi2.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\enchuff3_x64_generic.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\enchuff3_x64_jaguar.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\enchuff3c.a64.S">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\histo.a64.S">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\histo_x64_generic.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_decoffs44.a64.S">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_decoffsalt.a64.S">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_huff_x64_zen2.nas">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_huff3.a64.S">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_huff3_cortex_a57.a64.S">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="asm\core\newlz_huff3_wide.a64.S">
+      <Filter>Asm\core</Filter>
+    </None>
+    <None Include="include\core\lzb_decode_inner.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\lzb_decode_inner2.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\lzb_fast.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\lzb_fast_generic.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\lzb_fast_normal.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\lzb_vfast.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\newlz_arrays.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\newlz_block_coders.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\newlz_decode_parse_inner.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\newlz_decode_parse_outer.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\newlz_huff_common.inc">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\newlz_rle_escape_packet.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\newlz_tans.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\newlzf_decode_parse_outer.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\newlzf_escape_packet.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\newlzhc_decode_parse_inner.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\newlzhc_decode_parse_outer.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\oodlecoreplugins_gen.inc">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\oodlejob.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\oodlejobobject_generator.inc">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\rrhuffman.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\rrlz_getmatchlen.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\rrsort.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\sloppymemset.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\suffixtrie2.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\asmlib_arm_a64.inc">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\asmlib_x86_x64.inc">
+      <Filter>Header Files\core</Filter>
+    </None>
+    <None Include="include\core\goldensearch.inl">
+      <Filter>Header Files\core</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\network\rrarithcoder.cpp">
+      <Filter>Source Files\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\network\rrtans.cpp">
+      <Filter>Source Files\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\network\testoo2netstub.cpp">
+      <Filter>Source Files\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\network\oodlestaticlzp.cpp">
+      <Filter>Source Files\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\network\oonet2.cpp">
+      <Filter>Source Files\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\oodletexpub.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\oodletexpubrrs.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\perceptualactivity.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrblock8x8util.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrcolor.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrcolorfunctors.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrcolorvecc.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrdxt1vq.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrdxt1vqhelp.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrdxtcblock.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrdxtccompress.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrdxtcenums.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrdxtcompresshelp.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrdxtcrd.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrfixedfloat.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrmat3.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrpixelformat.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurface.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfacebc67.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfaceblit.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfaceblitfastimpl.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfacedxtc.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfacefilters.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfacejobslicer.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfacerowcache.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfaceutil.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrvecc.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrveccutil.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\texbase.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc4compress.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc4rd.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc6compress.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc6rd.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc7bits.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc7compress.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc7decode_fast.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc7decode_fast_avx2.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc7prep.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc7rd.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc67format.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc67tables.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc67tables_generated.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\blocksurface.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\layout.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\linalg.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\oo2baseinc.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\templates\rrpool.cpp">
+      <Filter>Source Files\core\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\templates\rrscopedptr.cpp">
+      <Filter>Source Files\core\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\templates\rrvector.cpp">
+      <Filter>Source Files\core\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\templates\rrvector_a.cpp">
+      <Filter>Source Files\core\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\templates\rrhashfunction.cpp">
+      <Filter>Source Files\core\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\templates\rrhashtable.cpp">
+      <Filter>Source Files\core\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\templates\rrnew.cpp">
+      <Filter>Source Files\core\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\lzb.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_arrays.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_arrays_huff.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_arrays_rle.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_arrays_tans.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_block_coders.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_block_coders_ssse3.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_histo.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_multiarrays.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_offsets.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_offsets_avx2.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_offsets_sse4.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_shared.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_simd.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_simd_sse4.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_speedfit.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_sse4.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_tans.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlz_vtable.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlzf.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlzf_sse4.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlzhc.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\newlzhc_sse4.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\oodlebase.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\oodleconfigvalues.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\oodlecore.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\oodlecoreinit.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\oodlecoreplugins.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\oodlehandle.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\oodlejob.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\oodlelzcompressors.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\oodlelzlegacyvtable.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\oodlelzpub.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\oodlemalloc.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\oodleversion.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrarenaallocator.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrbase.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrbighash.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrbytepacking.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrcompressutil.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrhashes.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrhuffman.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrhuffmandecode.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrlinknode.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrlog.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrlogutil.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrlzh_lzhlw_shared.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrmath.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrmem.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrmemutil.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrrand.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrsimpleprof.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrvarbitcodes.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\rrvarbits.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\suffixtrie.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\suffixtriematcher.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\threadprofiler.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\biglog2table.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cbradutil.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cbstrutil.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cpux86.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ctmf.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\entropysets.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\entropysets_sse4.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\histogram.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\linux_symver.c">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\log2table.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\longrangematcher.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\lzasserts.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua-binding\network.cpp">
+      <Filter>Source Files\lua-binding</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

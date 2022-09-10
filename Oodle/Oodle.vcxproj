@@ -1,0 +1,1558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="LuaOodleNetwork|Win32">
+      <Configuration>LuaOodleNetwork</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="LuaOodleNetwork|x64">
+      <Configuration>LuaOodleNetwork</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OodleCore|Win32">
+      <Configuration>OodleCore</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OodleNetworkAndTexture|Win32">
+      <Configuration>OodleNetworkAndTexture</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OodleNetworkAndTexture|x64">
+      <Configuration>OodleNetworkAndTexture</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OodleNetwork|Win32">
+      <Configuration>OodleNetwork</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OodleCore|x64">
+      <Configuration>OodleCore</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OodleNetwork|x64">
+      <Configuration>OodleNetwork</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OodleTexture|Win32">
+      <Configuration>OodleTexture</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OodleTexture|x64">
+      <Configuration>OodleTexture</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\lua\lapi.h" />
+    <ClInclude Include="include\lua\lauxlib.h" />
+    <ClInclude Include="include\lua\lcode.h" />
+    <ClInclude Include="include\lua\lctype.h" />
+    <ClInclude Include="include\lua\ldebug.h" />
+    <ClInclude Include="include\lua\ldo.h" />
+    <ClInclude Include="include\lua\lfunc.h" />
+    <ClInclude Include="include\lua\lgc.h" />
+    <ClInclude Include="include\lua\llex.h" />
+    <ClInclude Include="include\lua\llimits.h" />
+    <ClInclude Include="include\lua\lmem.h" />
+    <ClInclude Include="include\lua\lobject.h" />
+    <ClInclude Include="include\lua\lopcodes.h" />
+    <ClInclude Include="include\lua\lparser.h" />
+    <ClInclude Include="include\lua\lstate.h" />
+    <ClInclude Include="include\lua\lstring.h" />
+    <ClInclude Include="include\lua\ltable.h" />
+    <ClInclude Include="include\lua\ltm.h" />
+    <ClInclude Include="include\lua\lua.h" />
+    <ClInclude Include="include\lua\lua.hpp" />
+    <ClInclude Include="include\lua\luaconf.h" />
+    <ClInclude Include="include\lua\lualib.h" />
+    <ClInclude Include="include\lua\lundump.h" />
+    <ClInclude Include="include\lua\lvm.h" />
+    <ClInclude Include="include\lua\lzio.h" />
+    <ClInclude Include="include\texture\bc7prep_format.h" />
+    <ClInclude Include="include\base\oo2baseinc.h" />
+    <ClInclude Include="include\base\oo2basepub.h" />
+    <ClInclude Include="include\base\oodlebasetypes.h" />
+    <ClInclude Include="include\core\biglog2table.h" />
+    <ClInclude Include="include\core\cbradutil.h" />
+    <ClInclude Include="include\core\cbstrutil.h" />
+    <ClInclude Include="include\core\cpux86.h" />
+    <ClInclude Include="include\core\ctmf.h" />
+    <ClInclude Include="include\core\eastl_heap.h" />
+    <ClInclude Include="include\core\entropysets.h" />
+    <ClInclude Include="include\core\histogram.h" />
+    <ClInclude Include="include\core\histogram_asm.h" />
+    <ClInclude Include="include\core\log2table.h" />
+    <ClInclude Include="include\core\longrangematcher.h" />
+    <ClInclude Include="include\core\lrminternal.h" />
+    <ClInclude Include="include\core\lzasserts.h" />
+    <ClInclude Include="include\core\lzb.h" />
+    <ClInclude Include="include\core\matchfinder.h" />
+    <ClInclude Include="include\core\newlz.h" />
+    <ClInclude Include="include\core\newlzf.h" />
+    <ClInclude Include="include\core\newlzf_decoder.h" />
+    <ClInclude Include="include\core\newlzhc.h" />
+    <ClInclude Include="include\core\newlzhc_decoder.h" />
+    <ClInclude Include="include\core\newlz_arrays.h" />
+    <ClInclude Include="include\core\newlz_arrays_huff.h" />
+    <ClInclude Include="include\core\newlz_arrays_rle.h" />
+    <ClInclude Include="include\core\newlz_arrays_tans.h" />
+    <ClInclude Include="include\core\newlz_block_coders.h" />
+    <ClInclude Include="include\core\newlz_block_coders_ssse3.h" />
+    <ClInclude Include="include\core\newlz_complexliterals.h" />
+    <ClInclude Include="include\core\newlz_decoder.h" />
+    <ClInclude Include="include\core\newlz_histo.h" />
+    <ClInclude Include="include\core\newlz_multiarrays.h" />
+    <ClInclude Include="include\core\newlz_offsets.h" />
+    <ClInclude Include="include\core\newlz_shared.h" />
+    <ClInclude Include="include\core\newlz_simd.h" />
+    <ClInclude Include="include\core\newlz_speedfit.h" />
+    <ClInclude Include="include\core\newlz_subliterals.h" />
+    <ClInclude Include="include\core\newlz_tans.h" />
+    <ClInclude Include="include\core\newlz_vtable.h" />
+    <ClInclude Include="include\core\oodlebase.h" />
+    <ClInclude Include="include\core\oodleconfigvalues.h" />
+    <ClInclude Include="include\core\oodlecore.h" />
+    <ClInclude Include="include\core\oodlecoreinit.h" />
+    <ClInclude Include="include\core\oodlecoreplugins.h" />
+    <ClInclude Include="include\core\oodlecoreplugins_gen.h" />
+    <ClInclude Include="include\core\oodlehandle.h" />
+    <ClInclude Include="include\core\oodlejob.h" />
+    <ClInclude Include="include\core\oodlelzcompressors.h" />
+    <ClInclude Include="include\core\oodlelzlegacyvtable.h" />
+    <ClInclude Include="include\core\oodlelzpub.h" />
+    <ClInclude Include="include\core\oodlemalloc.h" />
+    <ClInclude Include="include\core\oodlepublicate.h" />
+    <ClInclude Include="include\core\oodleversion.h" />
+    <ClInclude Include="include\core\publicate.h" />
+    <ClInclude Include="include\core\public\oodle_platform.h" />
+    <ClInclude Include="include\core\rrarenaallocator.h" />
+    <ClInclude Include="include\core\rrbase.h" />
+    <ClInclude Include="include\core\rrbighash.h" />
+    <ClInclude Include="include\core\rrbits.h" />
+    <ClInclude Include="include\core\rrbytepacking.h" />
+    <ClInclude Include="include\core\rrcompressutil.h" />
+    <ClInclude Include="include\core\rrcppstd.h" />
+    <ClInclude Include="include\core\rrfuzztesthelper.h" />
+    <ClInclude Include="include\core\rrhashes.h" />
+    <ClInclude Include="include\core\rrhuffman.h" />
+    <ClInclude Include="include\core\rrhuffmandecode.h" />
+    <ClInclude Include="include\core\rrlinknode.h" />
+    <ClInclude Include="include\core\rrlog.h" />
+    <ClInclude Include="include\core\rrlogutil.h" />
+    <ClInclude Include="include\core\rrlzh_lzhlw_shared.h" />
+    <ClInclude Include="include\core\rrmath.h" />
+    <ClInclude Include="include\core\rrmem.h" />
+    <ClInclude Include="include\core\rrmemutil.h" />
+    <ClInclude Include="include\core\rrplatform.h" />
+    <ClInclude Include="include\core\rrprefetch.h" />
+    <ClInclude Include="include\core\rrrand.h" />
+    <ClInclude Include="include\core\rrsimpleprof.h" />
+    <ClInclude Include="include\core\rrsimpleprofstub.h" />
+    <ClInclude Include="include\core\rrsprintf.h" />
+    <ClInclude Include="include\core\rrstackarray.h" />
+    <ClInclude Include="include\core\rrvarbitcodes.h" />
+    <ClInclude Include="include\core\rrvarbits.h" />
+    <ClInclude Include="include\core\speedfitter.h" />
+    <ClInclude Include="include\core\suffixtrie.h" />
+    <ClInclude Include="include\core\suffixtriematcher.h" />
+    <ClInclude Include="include\core\templates\chunkstack.h" />
+    <ClInclude Include="include\core\templates\rralgorithm.h" />
+    <ClInclude Include="include\core\templates\rrhashfunction.h" />
+    <ClInclude Include="include\core\templates\rrhashtable.h" />
+    <ClInclude Include="include\core\templates\rrnew.h" />
+    <ClInclude Include="include\core\templates\rrpool.h" />
+    <ClInclude Include="include\core\templates\rrscopedptr.h" />
+    <ClInclude Include="include\core\templates\rrstl.h" />
+    <ClInclude Include="include\core\templates\rrvector.h" />
+    <ClInclude Include="include\core\templates\rrvector_a.h" />
+    <ClInclude Include="include\core\templates\rrvector_flex.h" />
+    <ClInclude Include="include\core\templates\rrvector_s.h" />
+    <ClInclude Include="include\core\templates\rrvector_st.h" />
+    <ClInclude Include="include\core\templates\rrvector_t.h" />
+    <ClInclude Include="include\core\templates\rrvector_util.h" />
+    <ClInclude Include="include\core\threadprofiler.h" />
+    <ClInclude Include="include\network\oodle2netpub.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\network\oodlenetplugins_gen.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\network\oodlenetworkversion.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\network\oodlestaticlzp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\network\oonet2.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\network\rrarithcoder.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\network\rrtans.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc4compress.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc4rd.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc67format.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc67tables.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc6compress.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc6compress_internal.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc6rd.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc7bits.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc7compress.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc7compress_internal.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc7decode_fast.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc7prep.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\bc7rd.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\blocksurface.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\layout.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\linalg.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\oodle2texint.h" />
+    <ClInclude Include="include\texture\oodletexplugins_gen.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\oodletexpub.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\oodletexpubrrs.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\oodletextureversion.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\perceptualactivity.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrblock8x8util.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrcolor.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrcolorfunctors.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrcolorvecc.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrdxt1vq.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrdxt1vqhelp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrdxtcblock.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrdxtccompress.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrdxtcenums.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrdxtcompresshelp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrdxtcrd.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrfixedfloat.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrmat3.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrpixelformat.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurface.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfacebc67.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfaceblit.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfaceblitfastimpl.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfacedxtc.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfacefilters.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfacejobslicer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfacerowcache.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrsurfaceutil.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrvecc.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\rrveccutil.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include\texture\texbase.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="asm\core\enchuff3c.a64.S" />
+    <None Include="asm\core\enchuff3_x64_bmi2.nas" />
+    <None Include="asm\core\enchuff3_x64_generic.nas" />
+    <None Include="asm\core\enchuff3_x64_jaguar.nas" />
+    <None Include="asm\core\histo.a64.S" />
+    <None Include="asm\core\histo_x64_generic.nas" />
+    <None Include="asm\core\newlz_decoffs44.a64.S" />
+    <None Include="asm\core\newlz_decoffsalt.a64.S" />
+    <None Include="asm\core\newlz_huff3.a64.S" />
+    <None Include="asm\core\newlz_huff3_cortex_a57.a64.S" />
+    <None Include="asm\core\newlz_huff3_wide.a64.S" />
+    <None Include="asm\core\newlz_huff6.a64.S" />
+    <None Include="asm\core\newlz_huff6_cortex_a57.a64.S" />
+    <None Include="asm\core\newlz_huff6_wide.a64.S" />
+    <None Include="asm\core\newlz_huff6_x64_bmi2.nas" />
+    <None Include="asm\core\newlz_huff6_x64_generic.nas" />
+    <None Include="asm\core\newlz_huff6_x64_zen2.nas" />
+    <None Include="asm\core\newlz_huff6_x86_sse2.nas" />
+    <None Include="asm\core\newlz_huffx64_bmi2.nas" />
+    <None Include="asm\core\newlz_huffx64_generic.nas" />
+    <None Include="asm\core\newlz_huffx64_jaguar.nas" />
+    <None Include="asm\core\newlz_huffx86_sse2.nas" />
+    <None Include="asm\core\newlz_huff_x64_zen2.nas" />
+    <None Include="asm\core\newlz_tans.a64.S" />
+    <None Include="asm\core\newlz_tans_cortex_a57.a64.S" />
+    <None Include="asm\core\newlz_tans_wide.a64.S" />
+    <None Include="asm\core\newlz_tans_x64_bmi2.nas" />
+    <None Include="asm\core\newlz_tans_x64_generic.nas" />
+    <None Include="asm\core\newlz_tans_x64_jaguar.nas" />
+    <None Include="asm\core\x64_wc_probe.nas" />
+    <None Include="include\core\asmlib_arm_a64.inc" />
+    <None Include="include\core\asmlib_x86_x64.inc" />
+    <None Include="include\core\goldensearch.inl" />
+    <None Include="include\core\lzb_decode_inner.inl" />
+    <None Include="include\core\lzb_decode_inner2.inl" />
+    <None Include="include\core\lzb_fast.inl" />
+    <None Include="include\core\lzb_fast_generic.inl" />
+    <None Include="include\core\lzb_fast_normal.inl" />
+    <None Include="include\core\lzb_vfast.inl" />
+    <None Include="include\core\newlzf_decode_parse_outer.inl" />
+    <None Include="include\core\newlzf_escape_packet.inl" />
+    <None Include="include\core\newlzhc_decode_parse_inner.inl" />
+    <None Include="include\core\newlzhc_decode_parse_outer.inl" />
+    <None Include="include\core\newlz_arrays.inl" />
+    <None Include="include\core\newlz_block_coders.inl" />
+    <None Include="include\core\newlz_decode_parse_inner.inl" />
+    <None Include="include\core\newlz_decode_parse_outer.inl" />
+    <None Include="include\core\newlz_huff_common.inc" />
+    <None Include="include\core\newlz_rle_escape_packet.inl" />
+    <None Include="include\core\newlz_tans.inl" />
+    <None Include="include\core\oodlecoreplugins_gen.inc" />
+    <None Include="include\core\oodlejob.inl" />
+    <None Include="include\core\oodlejobobject_generator.inc" />
+    <None Include="include\core\rrhuffman.inl" />
+    <None Include="include\core\rrlz_getmatchlen.inl" />
+    <None Include="include\core\rrsort.inl" />
+    <None Include="include\core\sloppymemset.inl" />
+    <None Include="include\core\suffixtrie2.inl" />
+    <None Include="include\network\arith_nosbvaluecoder.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="include\network\arith_o0.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="include\network\arith_o1.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="include\network\arith_o1scontext.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="include\network\arith_o1symbolranker.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="include\network\arith_symbolranker.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="include\network\oodlenetplugins_gen.inc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="include\network\rrarithcoder.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="include\network\rrtans.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="include\texture\bc7decode_fast_common.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="include\texture\oodletexplugins_gen.inc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="include\texture\perceptualactivity.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="include\texture\rrdxt1vqhelp.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="include\texture\rrdxtccompress.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="include\texture\vec128.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="include\texture\vec256.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\base\oo2baseinc.cpp" />
+    <ClCompile Include="src\core\biglog2table.cpp" />
+    <ClCompile Include="src\core\cbradutil.cpp" />
+    <ClCompile Include="src\core\cbstrutil.cpp" />
+    <ClCompile Include="src\core\cpux86.cpp" />
+    <ClCompile Include="src\core\ctmf.cpp" />
+    <ClCompile Include="src\core\entropysets.cpp" />
+    <ClCompile Include="src\core\entropysets_sse4.cpp" />
+    <ClCompile Include="src\core\histogram.cpp" />
+    <ClCompile Include="src\core\linux_symver.c" />
+    <ClCompile Include="src\core\log2table.cpp" />
+    <ClCompile Include="src\core\longrangematcher.cpp" />
+    <ClCompile Include="src\core\lzasserts.cpp" />
+    <ClCompile Include="src\core\lzb.cpp" />
+    <ClCompile Include="src\core\newlz.cpp" />
+    <ClCompile Include="src\core\newlzf.cpp" />
+    <ClCompile Include="src\core\newlzf_sse4.cpp" />
+    <ClCompile Include="src\core\newlzhc.cpp" />
+    <ClCompile Include="src\core\newlzhc_sse4.cpp" />
+    <ClCompile Include="src\core\newlz_arrays.cpp" />
+    <ClCompile Include="src\core\newlz_arrays_huff.cpp" />
+    <ClCompile Include="src\core\newlz_arrays_rle.cpp" />
+    <ClCompile Include="src\core\newlz_arrays_tans.cpp" />
+    <ClCompile Include="src\core\newlz_block_coders.cpp" />
+    <ClCompile Include="src\core\newlz_block_coders_ssse3.cpp" />
+    <ClCompile Include="src\core\newlz_histo.cpp" />
+    <ClCompile Include="src\core\newlz_multiarrays.cpp" />
+    <ClCompile Include="src\core\newlz_offsets.cpp" />
+    <ClCompile Include="src\core\newlz_offsets_avx2.cpp" />
+    <ClCompile Include="src\core\newlz_offsets_sse4.cpp" />
+    <ClCompile Include="src\core\newlz_shared.cpp" />
+    <ClCompile Include="src\core\newlz_simd.cpp" />
+    <ClCompile Include="src\core\newlz_simd_sse4.cpp" />
+    <ClCompile Include="src\core\newlz_speedfit.cpp" />
+    <ClCompile Include="src\core\newlz_sse4.cpp" />
+    <ClCompile Include="src\core\newlz_tans.cpp" />
+    <ClCompile Include="src\core\newlz_vtable.cpp" />
+    <ClCompile Include="src\core\oodlebase.cpp" />
+    <ClCompile Include="src\core\oodleconfigvalues.cpp" />
+    <ClCompile Include="src\core\oodlecore.cpp" />
+    <ClCompile Include="src\core\oodlecoreinit.cpp" />
+    <ClCompile Include="src\core\oodlecoreplugins.cpp" />
+    <ClCompile Include="src\core\oodlehandle.cpp" />
+    <ClCompile Include="src\core\oodlejob.cpp" />
+    <ClCompile Include="src\core\oodlelzcompressors.cpp" />
+    <ClCompile Include="src\core\oodlelzlegacyvtable.cpp" />
+    <ClCompile Include="src\core\oodlelzpub.cpp" />
+    <ClCompile Include="src\core\oodlemalloc.cpp" />
+    <ClCompile Include="src\core\oodleversion.cpp" />
+    <ClCompile Include="src\core\rrarenaallocator.cpp" />
+    <ClCompile Include="src\core\rrbase.cpp" />
+    <ClCompile Include="src\core\rrbighash.cpp" />
+    <ClCompile Include="src\core\rrbytepacking.cpp" />
+    <ClCompile Include="src\core\rrcompressutil.cpp" />
+    <ClCompile Include="src\core\rrhashes.cpp" />
+    <ClCompile Include="src\core\rrhuffman.cpp" />
+    <ClCompile Include="src\core\rrhuffmandecode.cpp" />
+    <ClCompile Include="src\core\rrlinknode.cpp" />
+    <ClCompile Include="src\core\rrlog.cpp" />
+    <ClCompile Include="src\core\rrlogutil.cpp" />
+    <ClCompile Include="src\core\rrlzh_lzhlw_shared.cpp" />
+    <ClCompile Include="src\core\rrmath.cpp" />
+    <ClCompile Include="src\core\rrmem.cpp" />
+    <ClCompile Include="src\core\rrmemutil.cpp" />
+    <ClCompile Include="src\core\rrrand.cpp" />
+    <ClCompile Include="src\core\rrsimpleprof.cpp" />
+    <ClCompile Include="src\core\rrvarbitcodes.cpp" />
+    <ClCompile Include="src\core\rrvarbits.cpp" />
+    <ClCompile Include="src\core\suffixtrie.cpp" />
+    <ClCompile Include="src\core\suffixtriematcher.cpp" />
+    <ClCompile Include="src\core\templates\rrhashfunction.cpp" />
+    <ClCompile Include="src\core\templates\rrhashtable.cpp" />
+    <ClCompile Include="src\core\templates\rrnew.cpp" />
+    <ClCompile Include="src\core\templates\rrpool.cpp" />
+    <ClCompile Include="src\core\templates\rrscopedptr.cpp" />
+    <ClCompile Include="src\core\templates\rrvector.cpp" />
+    <ClCompile Include="src\core\templates\rrvector_a.cpp" />
+    <ClCompile Include="src\core\threadprofiler.cpp" />
+    <ClCompile Include="src\lua-binding\network.cpp" />
+    <ClCompile Include="src\network\oodlestaticlzp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\network\oonet2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\network\rrarithcoder.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\network\rrtans.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\network\testoo2netstub.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetworkAndTexture|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetworkAndTexture|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc4compress.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc4rd.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc67format.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc67tables.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc67tables_generated.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc6compress.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc6rd.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc7bits.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc7compress.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc7decode_fast.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc7decode_fast_avx2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc7prep.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\bc7rd.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\blocksurface.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\layout.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\linalg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\oodletexpub.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\oodletexpubrrs.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\perceptualactivity.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrblock8x8util.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrcolor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrcolorfunctors.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrcolorvecc.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrdxt1vq.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrdxt1vqhelp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrdxtcblock.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrdxtccompress.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrdxtcenums.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrdxtcompresshelp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrdxtcrd.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrfixedfloat.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrmat3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrpixelformat.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurface.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfacebc67.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfaceblit.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfaceblitfastimpl.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfacedxtc.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfacefilters.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfacejobslicer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfacerowcache.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrsurfaceutil.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrvecc.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\rrveccutil.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\texture\texbase.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{719c2d30-beba-4b05-b675-725a568c9a85}</ProjectGuid>
+    <RootNamespace>Oodle</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='OodleNetworkAndTexture|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='OodleNetworkAndTexture|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>oo2core_9_win$(PlatformArchitecture)</TargetName>
+    <OutDir>$(ProjectDir)bin\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Configuration)\$(Platform)</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>oo2net_9_win$(PlatformArchitecture)</TargetName>
+    <OutDir>$(ProjectDir)bin\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Configuration)\$(Platform)</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>oo2net_9_win$(PlatformArchitecture)</TargetName>
+    <OutDir>$(ProjectDir)bin\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Configuration)\$(Platform)</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>oo2core_9_win$(PlatformArchitecture)</TargetName>
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>oo2net_9_win$(PlatformArchitecture)</TargetName>
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>oo2net9</TargetName>
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OodleNetworkAndTexture|Win32'">
+    <TargetName>oo2netex_9_win$(PlatformArchitecture)</TargetName>
+    <OutDir>$(ProjectDir)bin\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Configuration)\$(Platform)</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OodleNetworkAndTexture|x64'">
+    <TargetName>oo2netex_9_win$(PlatformArchitecture)</TargetName>
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">
+    <TargetName>oo2tex_9_win$(PlatformArchitecture)</TargetName>
+    <OutDir>$(ProjectDir)bin\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Configuration)\$(Platform)</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">
+    <TargetName>oo2tex_9_win$(PlatformArchitecture)</TargetName>
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\obj\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OodleCore|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;OODLE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)asm\core;$(ProjectDir)src\core;$(ProjectDir)include\network;$(ProjectDir)include\texture;$(ProjectDir)include\core\templates;$(ProjectDir)include\core\public;$(ProjectDir)include\core;$(ProjectDir)include\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;OODLE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)asm\core;$(ProjectDir)src\core;$(ProjectDir)include\network;$(ProjectDir)include\texture;$(ProjectDir)include\core\templates;$(ProjectDir)include\core\public;$(ProjectDir)include\core;$(ProjectDir)include\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;OODLE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)asm\core;$(ProjectDir)src\core;$(ProjectDir)include\network;$(ProjectDir)include\texture;$(ProjectDir)include\core\templates;$(ProjectDir)include\core\public;$(ProjectDir)include\core;$(ProjectDir)include\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OodleCore|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;OODLE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)asm\core;$(ProjectDir)src\core;$(ProjectDir)include\network;$(ProjectDir)include\texture;$(ProjectDir)include\core\templates;$(ProjectDir)include\core\public;$(ProjectDir)include\core;$(ProjectDir)include\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OodleNetwork|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;OODLE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)asm\core;$(ProjectDir)src\core;$(ProjectDir)include\network;$(ProjectDir)include\texture;$(ProjectDir)include\core\templates;$(ProjectDir)include\core\public;$(ProjectDir)include\core;$(ProjectDir)include\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='LuaOodleNetwork|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>LUA_BUILD_AS_DLL;NDEBUG;OODLE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)asm\core;$(ProjectDir)src\core;$(ProjectDir)include\network;$(ProjectDir)include\texture;$(ProjectDir)include\core\templates;$(ProjectDir)include\core\public;$(ProjectDir)include\core;$(ProjectDir)include\base;$(ProjectDir)include\lua;$(ProjectDir)src\network;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>lua52.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Bin\$(Platform)\Lua52\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OodleNetworkAndTexture|Win32'">
+    <ClCompile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OodleNetworkAndTexture|Win32'">
+    <ClCompile>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)asm\core;$(ProjectDir)src\core;$(ProjectDir)include\network;$(ProjectDir)include\texture;$(ProjectDir)include\core\templates;$(ProjectDir)include\core\public;$(ProjectDir)include\core;$(ProjectDir)include\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">
+    <ClCompile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OodleTexture|Win32'">
+    <ClCompile>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)asm\core;$(ProjectDir)src\core;$(ProjectDir)include\network;$(ProjectDir)include\texture;$(ProjectDir)include\core\templates;$(ProjectDir)include\core\public;$(ProjectDir)include\core;$(ProjectDir)include\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OodleNetworkAndTexture|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OodleNetworkAndTexture|x64'">
+    <ClCompile>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)asm\core;$(ProjectDir)src\core;$(ProjectDir)include\network;$(ProjectDir)include\texture;$(ProjectDir)include\core\templates;$(ProjectDir)include\core\public;$(ProjectDir)include\core;$(ProjectDir)include\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OodleTexture|x64'">
+    <ClCompile>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)asm\core;$(ProjectDir)src\core;$(ProjectDir)include\network;$(ProjectDir)include\texture;$(ProjectDir)include\core\templates;$(ProjectDir)include\core\public;$(ProjectDir)include\core;$(ProjectDir)include\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
